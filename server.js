@@ -1,7 +1,7 @@
 // dependencies
 var express = require('express');
-var methodOverride = ('method-override');
-var bodyParser = ('body-parser');
+var bodyParser = require('body-parser');
+var methodOverride = require('method-override');
 
 var app = express();
 
