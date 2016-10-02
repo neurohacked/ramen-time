@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
 	host: 'localhost',
 	user: 'root',
 	password: '',
-	database: 'ramn_db'
+	database: 'ramen_db'
 });
 
 connection.connect(function (err) {
