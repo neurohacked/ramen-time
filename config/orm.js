@@ -1,7 +1,7 @@
 /*
  * O.R.M. functions that take inputs/conditions and
  * turns them into SQL database commands.
-*/
+ */
 var connection = require('../config/connection.js');
 
 function printQuestionMarks(num) {

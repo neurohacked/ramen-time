@@ -1,5 +1,5 @@
 /*
- * Create the connection and export
+ * create the connection and export
  * for the database used by the O.R.M.
  */
 var mysql = require('mysql');
