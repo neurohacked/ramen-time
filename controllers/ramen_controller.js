@@ -26,24 +26,24 @@ router.post('/ramen/create', function(req, res) {
     });
 });
 
-router.put('/ramen/update/:id', function(req, res) {
+router.put('/ramen/modify/:id', function(req, res) {
     var condition = 'id = ' + req.params.id;
 
     console.log('Ramen', condition);
 
-    ramen.update({
-        sleepy: req.body.devoured
+    ramen.devour({
+        devoured: req.body.devoured
     }, condition, function() {
         res.redirect('/ramen');
     });
 });
 
-router.delete('/ramen/delete/:id', function(req, res) {
+router.delete('/ramen/scrap/:id', function(req, res) {
     var condition = 'id = ' + req.params.id;
 
     console.log('Ramen', condition);
 
-    ramen.delete(condition, function() {
+    ramen.scrap(condition, function() {
         res.redirect('/ramen');
     });
 });

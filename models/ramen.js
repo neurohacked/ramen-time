@@ -16,13 +16,13 @@ var ramen = {
 			cb(res);
 		});
 	},
-	modify: function (objColVals, condition, cb) {
-		orm.update('ramen', objColVals, condition, function (res) {
+	devour: function (objColVals, condition, cb) {
+		orm.devour('ramen', objColVals, condition, function (res) {
 			cb(res);
 		});
 	},
 	scrap: function (condition, cb) {
-		orm.delete('ramen', condition, function (res) {
+		orm.scrap('ramen', condition, function (res) {
 			cb(res);
 		});
 	}
