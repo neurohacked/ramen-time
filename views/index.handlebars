@@ -30,6 +30,12 @@
             <li>
                 {{this.name}}
             </li>
+
+            <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                <input type="hidden" name="id" value="{{this.id}}">
+                <button type="submit">Clear Dishes?</button>
+            </form>
+
         {{/if}}
     {{/each}}
 </ul>
