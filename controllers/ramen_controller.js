@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
 });
 
 router.get('/ramen', function(req, res) {
-    cat.all(function(data) {
+    ramen.all(function(data) {
         var hbsObject = {
             ramen: data
         };
@@ -21,7 +21,7 @@ router.get('/ramen', function(req, res) {
 });
 
 router.post('/ramen/create', function(req, res) {
-    cat.create(['name', 'devoured'], [req.body.name, req.body.devoured], function() {
+    ramen.create(['name', 'devoured'], [req.body.name, req.body.devoured], function() {
         res.redirect('/ramen');
     });
 });
@@ -31,7 +31,7 @@ router.put('/ramen/update/:id', function(req, res) {
 
     console.log('Ramen', condition);
 
-    cat.update({
+    ramen.update({
         sleepy: req.body.devoured
     }, condition, function() {
         res.redirect('/ramen');
@@ -43,7 +43,7 @@ router.delete('/ramen/delete/:id', function(req, res) {
 
     console.log('Ramen', condition);
 
-    cat.delete(condition, function() {
+    ramen.delete(condition, function() {
         res.redirect('/ramen');
     });
 });
