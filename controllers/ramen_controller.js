@@ -26,7 +26,7 @@ router.post('/ramen/create', function(req, res) {
     });
 });
 
-router.put('/ramen/modify/:id', function(req, res) {
+router.put('/ramen/devour/:id', function(req, res) {
     var condition = 'id = ' + req.params.id;
 
     console.log('Ramen', condition);

@@ -51,7 +51,7 @@ var orm = {
     },
     // objColVals are the columns and values to be update.
     // an example of objColVals - {name: panther, sleepy: true}
-    modify: function(table, objColVals, condition, cb) {
+    devour: function(table, objColVals, condition, cb) {
         var queryString = 'UPDATE ' + table;
 
         queryString = queryString + ' SET ';
