@@ -1,0 +1,50 @@
+<h1>Ramen!</h1>
+
+<h2>Ramen that has not been devoured.</h2>
+
+<ul>
+    {{#each ramen}}
+        {{#unless this.devoured}}
+            <li>
+                {{this.name}}
+
+                <form action="ramen/update/{{this.id}}?_method=PUT" method="POST">
+                    <input type="hidden" name="devoured" value="true">
+                    <button type="submit">DEVOUR!</button>
+                </form>
+
+                <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="id" value="{{this.id}}">
+                    <button type="submit">Scrap?</button>
+                </form>
+            </li>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<h2>Ramen that has been devoured.</h2>
+
+<ul>
+    {{#each ramen}}
+        {{#if this.devoured}}
+            <li>
+                {{this.name}}
+            </li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+<h2>Create some Ramen</h2>
+<form class="create-update-form" action="ramen/create" method="POST">
+
+    <div class="form-group">
+        <label for="ramen">Ramen Type:</label>
+        <input type="text" id="ramen" name="name">
+    </div>
+
+    <div class="form-group">
+        <input type="hidden" name="devoured" value="0">
+    </div>
+
+    <button type="submit">Create ramen</button>
+</form>
