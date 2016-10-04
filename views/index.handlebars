@@ -1,56 +1,93 @@
-<h1>Ramen!</h1>
-
-<h2>Ramen that has not been devoured.</h2>
-
-<ul>
-    {{#each ramen}}
-        {{#unless this.devoured}}
-            <li>
-                {{this.name}}
-
-                <form action="ramen/devour/{{this.id}}?_method=PUT" method="POST">
-                    <input type="hidden" name="devoured" value="true">
-                    <button type="submit">DEVOUR!</button>
-                </form>
-
-                <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
-                    <input type="hidden" name="id" value="{{this.id}}">
-                    <button type="submit">Scrap?</button>
-                </form>
-            </li>
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Ramen that has been devoured.</h2>
-
-<ul>
-    {{#each ramen}}
-        {{#if this.devoured}}
-            <li>
-                {{this.name}}
-            </li>
-
-            <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
-                <input type="hidden" name="id" value="{{this.id}}">
-                <button type="submit">Clear Dishes?</button>
-            </form>
-
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Create some Ramen</h2>
-<form class="create-update-form" action="ramen/create" method="POST">
-
-    <div class="form-group">
-        <label for="ramen">Ramen Type:</label>
-        <input type="text" id="ramen" name="name">
+<div class="container">
+    <div class="jumbotron">
+        <img class="ramen-time center-block" src="../../assets/img/rt.png" alt="" />
+        <button type="button" class="ramen-btn btn btn-lg btn-primary center-block" data-toggle="modal" data-target=".ramenModal">Create Some Ramen to Eat</button>
     </div>
 
-    <div class="form-group">
-        <input type="hidden" name="devoured" value="0">
+    <div class="row">
+        <div class="col col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">Ramen Available to Eat</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        {{#each ramen}}
+                            {{#unless this.devoured}}
+                                <div class="ramen col col-sm-12">
+                                    <div class="col col-sm-6">
+                                        <p class="ramen-name">{{this.name}}</p>
+                                    </div>
+                                    <div class="col col-sm-3">
+                                        <form action="ramen/devour/{{this.id}}?_method=PUT" method="POST">
+                                            <input type="hidden" name="devoured" value="true">
+                                            <button class="btn btn-sm btn-success" type="submit">DEVOUR!</button>
+                                        </form>
+                                    </div>
+                                    <div class="col col-sm-3">
+                                        <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                                            <input type="hidden" name="id" value="{{this.id}}">
+                                            <button class="btn btn-sm btn-danger" type="submit">Scrap?</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            {{/unless}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title text-center">Devoured Ramen</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        {{#each ramen}}
+                            {{#if this.devoured}}
+                                <div class="ramen col col-sm-12">
+                                    <div class="col col-sm-6">
+                                        <p class="ramen-name">{{this.name}}</p>
+                                    </div>
+                                    <div class="col col-sm-6">
+                                        <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                                            <input type="hidden" name="id" value="{{this.id}}">
+                                            <button class="btn btn-sm btn-warning center-block" type="submit">Clear the dishes?</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Create Ramen Modal -->
+        <div class="modal fade ramenModal" tabindex="-1" role="dialog" aria-labelledby="ramenModal">
+            <div class="modal-dialog" role="document">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h5 class="modal-title">Create Ramen</h5>
+                    </div>
+                    <form class="create-update-form" action="ramen/create" method="POST">
+                        <div class="modal-body text-center">
+                            <div class="create-ramen form-group">
+                                <label for="ramen">Ramen Type:</label>
+                                <input type="text" id="ramen" name="name">
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" name="devoured" value="0">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-md btn-success" type="submit">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <button type="submit">Create ramen</button>
-</form>
+</div>

@@ -1,0 +1,16 @@
+.ramen-time {
+    max-width: 45%;
+    margin-bottom: 15px
+}
+.ramen-btn {
+    margin: 45px auto 0;
+}
+.ramen {
+    background: #FAEBD7;
+    margin: 5px 0;
+    padding: 15px;
+}
+.ramen-name {
+    font-weight: bold;
+    font-size: 22px;
+}
