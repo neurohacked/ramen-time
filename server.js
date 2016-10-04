@@ -25,7 +25,7 @@ app.set('view engine', 'handlebars');
 var routes = require('./controllers/ramen_controller.js');
 app.use('/', routes);
 
-var port = 80;
+var port = 3000;
 app.listen(port, function() {
     console.log('Listening on PORT ' + port);
 });
