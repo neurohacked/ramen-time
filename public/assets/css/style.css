@@ -2,27 +2,44 @@
     max-width: 45%;
     margin-bottom: 15px
 }
+
 .ramen-btn {
     margin: 45px auto 0;
 }
+
 .panel-body {
     padding: 0 15px;
 }
+
 label {
     margin-bottom: 10px;
 }
+
+.radio-inline {
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
 .well {
     margin: 0;
 }
+
 .btn-sm {
     margin: 10px auto;
 }
+
+.ramen-create {
+    margin-top: 15px;
+}
+
 .ramen {
     padding: 15px;
 }
+
 .ramen-bowl {
     max-width: 60px;
 }
+
 .ramen-name {
     font-weight: 400;
     font-size: 20px;
