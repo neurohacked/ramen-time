@@ -8,6 +8,9 @@
 .panel-body {
     padding: 0 15px;
 }
+label {
+    margin-bottom: 10px;
+}
 .well {
     margin: 0;
 }
@@ -18,9 +21,10 @@
     padding: 15px;
 }
 .ramen-bowl {
-    max-width: 50px;
+    max-width: 60px;
 }
 .ramen-name {
-    font-weight: bold;
-    font-size: 22px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #333;
 }

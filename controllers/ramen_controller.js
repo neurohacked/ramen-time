@@ -21,7 +21,7 @@ router.get('/ramen', function(req, res) {
 });
 
 router.post('/ramen/create', function(req, res) {
-    ramen.create(['name', 'devoured'], [req.body.name, req.body.devoured], function() {
+    ramen.create(['name', 'image', 'devoured'], [req.body.name, req.body.image, req.body.devoured], function() {
         res.redirect('/ramen');
     });
 });
