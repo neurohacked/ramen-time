@@ -5,10 +5,15 @@
 .ramen-btn {
     margin: 45px auto 0;
 }
+.panel-body {
+    padding: 0 15px;
+}
 .ramen {
-    background: #FAEBD7;
-    margin: 5px 0;
     padding: 15px;
+    border-top: 2px solid #ccc;
+}
+.ramen:nth-child(last) {
+    border-bottom: none;
 }
 .ramen-name {
     font-weight: bold;
