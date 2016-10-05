@@ -1,9 +1,4 @@
 <div class="container">
-    <div class="jumbotron">
-        <img class="ramen-time center-block" src="../../assets/img/rt.png" alt="" />
-        <button type="button" class="ramen-btn btn btn-lg btn-primary center-block" data-toggle="modal" data-target=".ramenModal">Create Some Ramen to Eat</button>
-    </div>
-
     <div class="row">
         <div class="col col-sm-6">
             <div class="panel panel-default">
@@ -24,11 +19,11 @@
                                                 <h4 class="ramen-name media-heading text-center">{{this.name}}</h4>
                                                 <form action="ramen/devour/{{this.id}}?_method=PUT" method="POST">
                                                     <input type="hidden" name="devoured" value="true">
-                                                    <button class="btn btn-sm btn-success center-block" type="submit">Devour</button>
+                                                    <button class="btn btn-sm btn-success btn-block" type="submit"><i class="fa fa-cutlery" aria-hidden="true"></i> Devour</button>
                                                 </form>
                                                 <form action="ramen/tash/{{this.id}}?_method=DELETE" method="POST">
                                                     <input type="hidden" name="id" value="{{this.id}}">
-                                                    <button class="btn btn-sm btn-danger center-block" type="submit">Trash</button>
+                                                    <button class="btn btn-sm btn-danger btn-block" type="submit"><i class="fa fa-trash" aria-hidden="true"></i> Trash</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -59,7 +54,7 @@
                                                 <h4 class="ramen-name media-heading text-center">{{this.name}}</h4>
                                                 <form action="ramen/tash/{{this.id}}?_method=DELETE" method="POST">
                                                     <input type="hidden" name="id" value="{{this.id}}">
-                                                    <button class="btn btn-sm btn-warning center-block" type="submit">Clear</button>
+                                                    <button class="btn btn-sm btn-warning btn-block" type="submit"><i class="fa fa-ban" aria-hidden="true"></i> Clear</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -95,25 +90,25 @@
                                     <input type="radio" name="image" id="inlineRadio2" value="assets/img/dish002.png" required><img class="ramen-bowl" src="assets/img/dish002.png" alt="Bowl of Ramen #2">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="image" id="inlineRadio3" value="assets/img/dish003.png" required><img class="ramen-bowl" src="assets/img/dish003.png" alt="Bow of Ramen #3">
+                                    <input type="radio" name="image" id="inlineRadio3" value="assets/img/dish003.png" required><img class="ramen-bowl" src="assets/img/dish003.png" alt="Bowl of Ramen #3">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="image" id="inlineRadio4" value="assets/img/dish004.png" required><img class="ramen-bowl" src="assets/img/dish004.png" alt="Bow of Ramen #4">
+                                    <input type="radio" name="image" id="inlineRadio4" value="assets/img/dish004.png" required><img class="ramen-bowl" src="assets/img/dish004.png" alt="Bowl of Ramen #4">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="image" id="inlineRadio5" value="assets/img/dish005.png" required><img class="ramen-bowl" src="assets/img/dish005.png" alt="Bow of Ramen #5">
+                                    <input type="radio" name="image" id="inlineRadio5" value="assets/img/dish005.png" required><img class="ramen-bowl" src="assets/img/dish005.png" alt="Bowl of Ramen #5">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="image" id="inlineRadio6" value="assets/img/dish006.png" required><img class="ramen-bowl" src="assets/img/dish006.png" alt="Bow of Ramen #6">
+                                    <input type="radio" name="image" id="inlineRadio6" value="assets/img/dish006.png" required><img class="ramen-bowl" src="assets/img/dish006.png" alt="Bowl of Ramen #6">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="image" id="inlineRadio7" value="assets/img/dish007.png" required><img class="ramen-bowl" src="assets/img/dish007.png" alt="Bow of Ramen #7">
+                                    <input type="radio" name="image" id="inlineRadio7" value="assets/img/dish007.png" required><img class="ramen-bowl" src="assets/img/dish007.png" alt="Bowl of Ramen #7">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="image" id="inlineRadio8" value="assets/img/dish008.png" required><img class="ramen-bowl" src="assets/img/dish008.png" alt="Bow of Ramen #8">
+                                    <input type="radio" name="image" id="inlineRadio8" value="assets/img/dish008.png" required><img class="ramen-bowl" src="assets/img/dish008.png" alt="Bowl of Ramen #8">
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="image" id="inlineRadio9" value="assets/img/dish009.png" required><img class="ramen-bowl" src="assets/img/dish009.png" alt="Bow of Ramen #9">
+                                    <input type="radio" name="image" id="inlineRadio9" value="assets/img/dish009.png" required><img class="ramen-bowl" src="assets/img/dish009.png" alt="Bowl of Ramen #9">
                                 </label>
                             </div>
                             <div class="form-group">

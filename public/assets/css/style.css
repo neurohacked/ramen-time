@@ -1,10 +1,78 @@
-.ramen-time {
-    max-width: 45%;
-    margin-bottom: 15px
+@font-face {
+  font-family: 'YOZAKURA-Regular';
+  src: url('../font/YOZAKURA-Regular.eot');
+  src: url('../font/YOZAKURA-Regular.woff2') format('woff2'),
+       url('../font/YOZAKURA-Regular.woff') format('woff'),
+       url('../font/YOZAKURA-Regular.ttf') format('truetype'),
+       url('../font/YOZAKURA-Regular.svg#YOZAKURA-Regular') format('svg'),
+       url('../font/YOZAKURA-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.ramen-btn {
-    margin: 45px auto 0;
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.navbar-brand {
+    font-family: 'YOZAKURA-Regular';
+    color: #333;
+    font-size: 36px;
+}
+
+.nav-img .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.nav-img .navbar-brand>img {
+    padding: 7px 14px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+body>.container {
+    padding: 60px 15px 0;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.footer>.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+code {
+    font-size: 80%;
+}
+
+.panel {
+    border: none;
+    box-shadow: none;
+}
+
+.panel-default {
+    border-color: transparent;
+}
+
+.panel-heading {
+    border: 1px solid #ddd;
+    border-radius: 3px;
 }
 
 .panel-body {
@@ -37,6 +105,7 @@ label {
 }
 
 .ramen-bowl {
+    margin-right: 20px;
     max-width: 60px;
 }
 
@@ -44,4 +113,8 @@ label {
     font-weight: 400;
     font-size: 20px;
     color: #333;
+}
+
+.fa {
+    margin-right: 5px;
 }
