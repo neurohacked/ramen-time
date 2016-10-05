@@ -22,7 +22,6 @@ body {
 
 .navbar-brand {
     font-family: 'YOZAKURA-Regular';
-    color: #333;
     font-size: 36px;
 }
 
@@ -49,6 +48,7 @@ body>.container {
 }
 
 .container .text-muted {
+    text-align: center;
     margin: 20px 0;
 }
 
