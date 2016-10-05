@@ -14,22 +14,24 @@
                     <div class="row">
                         {{#each ramen}}
                             {{#unless this.devoured}}
-                                <div class="ramen col col-sm-12">
-                                    <div class="col col-sm-6">
-                                        <img class="ramen-bowl img-responsive" src="assets/img/dish001.png" alt="Bowl of Ramen">
-                                        <p class="ramen-name">{{this.name}}</p>
-                                    </div>
-                                    <div class="col col-sm-3">
-                                        <form action="ramen/devour/{{this.id}}?_method=PUT" method="POST">
-                                            <input type="hidden" name="devoured" value="true">
-                                            <button class="btn btn-sm btn-success center-block" type="submit">Devour It!</button>
-                                        </form>
-                                    </div>
-                                    <div class="col col-sm-3">
-                                        <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
-                                            <input type="hidden" name="id" value="{{this.id}}">
-                                            <button class="btn btn-sm btn-danger center-block" type="submit">Scrap?</button>
-                                        </form>
+                                <div class="ramen col col-lg-6">
+                                    <div class="well">
+                                        <div class="media">
+                                            <div class="media-left media-middle">
+                                                <img class="ramen-bowl img-responsive" src="assets/img/dish001.png" alt="Bowl of Ramen">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="ramen-name media-heading text-center">{{this.name}}</h4>
+                                                <form action="ramen/devour/{{this.id}}?_method=PUT" method="POST">
+                                                    <input type="hidden" name="devoured" value="true">
+                                                    <button class="btn btn-sm btn-success center-block" type="submit">Devour It!</button>
+                                                </form>
+                                                <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                                                    <input type="hidden" name="id" value="{{this.id}}">
+                                                    <button class="btn btn-sm btn-danger center-block" type="submit">Scrap</button>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             {{/unless}}
@@ -47,16 +49,20 @@
                     <div class="row">
                         {{#each ramen}}
                             {{#if this.devoured}}
-                                <div class="ramen col col-sm-12">
-                                    <div class="col col-sm-6">
-                                        <img class="ramen-bowl img-responsive" src="assets/img/dish001.png" alt="Bowl of Ramen">
-                                        <p class="ramen-name">{{this.name}}</p>
-                                    </div>
-                                    <div class="col col-sm-6">
-                                        <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
-                                            <input type="hidden" name="id" value="{{this.id}}">
-                                            <button class="btn btn-sm btn-warning center-block" type="submit">Clear the dishes?</button>
-                                        </form>
+                                <div class="ramen col col-lg-6">
+                                    <div class="well">
+                                        <div class="media">
+                                            <div class="media-left media-middle">
+                                                <img class="ramen-bowl media-object" src="assets/img/dish001.png" alt="Bowl of Ramen">
+                                            </div>
+                                            <div class="media-body">
+                                                <h4 class="ramen-name media-heading text-center">{{this.name}}</h4>
+                                                <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                                                    <input type="hidden" name="id" value="{{this.id}}">
+                                                    <button class="btn btn-sm btn-warning center-block" type="submit">Clear</button>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             {{/if}}

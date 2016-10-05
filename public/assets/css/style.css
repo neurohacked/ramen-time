@@ -8,21 +8,19 @@
 .panel-body {
     padding: 0 15px;
 }
+.well {
+    margin: 0;
+}
+.btn-sm {
+    margin: 10px auto;
+}
 .ramen {
     padding: 15px;
-    border-top: 2px solid #ccc;
-}
-.ramen:nth-child(last) {
-    border-bottom: none;
 }
 .ramen-bowl {
-    float: left;
-    padding-right: 5%;
-    border-right: 1px solid #ccc;
     max-width: 50px;
 }
 .ramen-name {
-    padding-left: 65px;
     font-weight: bold;
     font-size: 22px;
 }
