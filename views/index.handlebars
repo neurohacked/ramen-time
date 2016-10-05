@@ -24,11 +24,11 @@
                                                 <h4 class="ramen-name media-heading text-center">{{this.name}}</h4>
                                                 <form action="ramen/devour/{{this.id}}?_method=PUT" method="POST">
                                                     <input type="hidden" name="devoured" value="true">
-                                                    <button class="btn btn-sm btn-success center-block" type="submit">Devour It</button>
+                                                    <button class="btn btn-sm btn-success center-block" type="submit">Devour</button>
                                                 </form>
-                                                <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                                                <form action="ramen/tash/{{this.id}}?_method=DELETE" method="POST">
                                                     <input type="hidden" name="id" value="{{this.id}}">
-                                                    <button class="btn btn-sm btn-danger center-block" type="submit">Scrap</button>
+                                                    <button class="btn btn-sm btn-danger center-block" type="submit">Trash</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -57,7 +57,7 @@
                                             </div>
                                             <div class="media-body">
                                                 <h4 class="ramen-name media-heading text-center">{{this.name}}</h4>
-                                                <form action="ramen/scrap/{{this.id}}?_method=DELETE" method="POST">
+                                                <form action="ramen/tash/{{this.id}}?_method=DELETE" method="POST">
                                                     <input type="hidden" name="id" value="{{this.id}}">
                                                     <button class="btn btn-sm btn-warning center-block" type="submit">Clear</button>
                                                 </form>

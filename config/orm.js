@@ -65,7 +65,7 @@ var orm = {
             cb(result);
         });
     },
-    scrap: function(table, condition, cb) {
+    trash: function(table, condition, cb) {
         var queryString = 'DELETE FROM ' + table;
         queryString = queryString + ' WHERE ';
         queryString = queryString + condition;

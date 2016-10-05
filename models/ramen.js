@@ -21,8 +21,8 @@ var ramen = {
 			cb(res);
 		});
 	},
-	scrap: function (condition, cb) {
-		orm.scrap('ramen', condition, function (res) {
+	trash: function (condition, cb) {
+		orm.trash('ramen', condition, function (res) {
 			cb(res);
 		});
 	}
