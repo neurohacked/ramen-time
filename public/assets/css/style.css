@@ -88,6 +88,10 @@ label {
     margin-bottom: 15px;
 }
 
+.alert {
+    margin-bottom: 0;
+}
+
 .well {
     margin: 0;
 }
