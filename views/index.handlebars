@@ -19,7 +19,7 @@
                                                 <h4 class="ramen-name media-heading text-center">{{this.name}}</h4>
                                                 <form action="ramen/devour/{{this.id}}?_method=PUT" method="POST">
                                                     <input type="hidden" name="devoured" value="true">
-                                                    <button class="btn btn-sm btn-success btn-block" type="submit"><i class="fa fa-cutlery" aria-hidden="true"></i> Devour</button>
+                                                    <button class="btn btn-sm btn-success btn-block" type="submit"><span class="icon-chopsticks"></span> Devour</button>
                                                 </form>
                                                 <form action="ramen/trash/{{this.id}}?_method=DELETE" method="POST">
                                                     <input type="hidden" name="id" value="{{this.id}}">
