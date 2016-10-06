@@ -77,6 +77,9 @@
                     </div>
                     <form class="create-update-form" action="ramen/create" method="POST">
                         <div class="ramen-create modal-body">
+                            <div class="alert alert-info alert-dismissible" role="alert" style="display: none">
+                                <button type="button" class="close" data-hide="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Looking for some ramen ideas? Check out this <a class="alert-link" href="http://luckypeach.com/guides/a-guide-to-the-regional-ramen-of-japan/" target="_blank">comprehensive guide</a>.
+                            </div>
                             <div class="form-group">
                                 <label for="ramen">Ramen Name <a href="#" onclick="$('.alert').show()"><i class="fa fa-info-circle fa-fw"></i></a></label><br>
                                 <input type="text" class="form-control" id="ramen" name="name" placeholder="Enter a name for your ramen. Yes, there is more than one type of ramen..." required>
@@ -113,9 +116,6 @@
                             </div>
                             <div class="form-group">
                                 <input type="hidden" name="devoured" value="0">
-                            </div>
-                            <div class="alert alert-info alert-dismissible" role="alert" style="display: none">
-                                <button type="button" class="close" data-hide="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>Looking for some ramen ideas? Check out this <a class="alert-link" href="http://luckypeach.com/guides/a-guide-to-the-regional-ramen-of-japan/" target="_blank">comprehensive guide</a>.
                             </div>
                         </div>
                         <div class="modal-footer">
