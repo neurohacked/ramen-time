@@ -12,4 +12,4 @@
 * mysql
 
 ### Live
-Live version can be viewed at https://ramen-time.herokuapp.com
+https://ramen-time.herokuapp.com
