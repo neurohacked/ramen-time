@@ -15,4 +15,5 @@
 https://ramen-time.herokuapp.com
 
 ### Alternative Version
-An alternative version of this codebase using [Sequelize](https://github.com/sequelize/sequelize) can be viewed at: https://github.com/neurohacked/sequelize-ramen-time
+An alternative version of this codebase using [Sequelize](https://github.com/sequelize/sequelize) can be viewed at:
+https://github.com/neurohacked/sequelize-ramen-time
