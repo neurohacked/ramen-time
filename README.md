@@ -11,10 +11,10 @@
 * method-override
 * mysql
 
-### Live
-https://ramen-time.herokuapp.com
-
 ### Alternative Version
 An alternative version of this codebase using [Sequelize](https://github.com/sequelize/sequelize) can be viewed at:
 
 https://github.com/neurohacked/sequelize-ramen-time
+
+**Live**
+https://ramen-time.herokuapp.com
