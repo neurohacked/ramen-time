@@ -16,5 +16,4 @@ An alternative version of this codebase using [Sequelize](https://github.com/seq
 
 https://github.com/neurohacked/sequelize-ramen-time
 
-**Live**
-https://ramen-time.herokuapp.com
+**Live**: https://ramen-time.herokuapp.com
